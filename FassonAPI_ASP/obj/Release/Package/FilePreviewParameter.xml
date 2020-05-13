@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="FassonAPI" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\Vitaly\\source\\repos\\FassonAPI_ASP\\FassonAPI_ASP\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\Vitaly\\source\\repos\\FassonAPI_ASP\\FassonAPI_ASP\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="StorageConnection-Web.config Connection String" description="" value="UseDevelopmentStorage=true" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Vitaly\\source\\repos\\FassonAPI_ASP\\FassonAPI_ASP\\obj\\Release\\Package\\PackageTmp\\Views\\Web\.config$" match="/configuration/connectionStrings/add[@name='StorageConnection']/@connectionString" />
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Vitaly\\source\\repos\\FassonAPI_ASP\\FassonAPI_ASP\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='StorageConnection']/@connectionString" />
+  </parameter>
+</parameters>

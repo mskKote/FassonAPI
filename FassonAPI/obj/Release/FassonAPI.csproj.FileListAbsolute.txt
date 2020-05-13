@@ -1,0 +1,5 @@
+C:\Users\Vitaly\source\repos\FassonAPI_ASP\FassonAPI\bin\Release\FassonAPI.dll
+C:\Users\Vitaly\source\repos\FassonAPI_ASP\FassonAPI\bin\Release\FassonAPI.pdb
+C:\Users\Vitaly\source\repos\FassonAPI_ASP\FassonAPI\obj\Release\FassonAPI.csproj.CoreCompileInputs.cache
+C:\Users\Vitaly\source\repos\FassonAPI_ASP\FassonAPI\obj\Release\FassonAPI.dll
+C:\Users\Vitaly\source\repos\FassonAPI_ASP\FassonAPI\obj\Release\FassonAPI.pdb

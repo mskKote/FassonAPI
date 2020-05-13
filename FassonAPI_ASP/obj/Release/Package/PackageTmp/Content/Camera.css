@@ -1,0 +1,68 @@
+/*Весь CSS, касающийся камеры
+    Кнопки, камера и элементы
+
+    <p class="camera">
+        <video id="video">Video stream not available.</video>
+        <button id="startbutton" onclick="takepicture();">Make portrait</button>
+        <canvas id="canvas"></canvas>
+    </p>
+*/
+
+#video {
+    border: 1px solid black;
+    box-shadow: 2px 2px 3px black;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+}
+
+#canvas {
+    display: none;
+    /*border: 1px solid black;
+    box-shadow: 2px 2px 3px black;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;*/
+}
+
+.camera {
+    width: 100%;
+    display: inline-block;
+    margin: 0;
+}
+
+.showCamera {
+    background-color: #2d2d2d !important;
+}
+
+#startbutton {
+    display: block;
+    position: relative;
+    margin-top: 3px;
+    margin-left: 0px !important;
+    background-color: transparent;
+    box-shadow: 0px 0px 1px 2px rgba(0, 0, 0, 0.2) !important;
+    font-size: 2em !important;
+    font-family: 'Literata', serif, sans-serif !important;
+    border: 2px solid lightcyan;
+    color: lightcyan;
+    width: 100%;
+    border-radius: 30px;
+    line-height: 1.5 !important;
+}
+
+.happyEnd {
+    background-color: #41b682 !important;
+    color: #000;
+}
+
+.badEnd {
+    background-color: #DC143C !important;
+    color: #000;
+}
+
+.waitEnd {
+    background-color: #ff8500 !important;
+    border: 2px solid #000 !important;
+    color: #000 !important;
+}

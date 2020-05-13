@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="http-equiv" content="Content-type: text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FassonAPI</title>
+    <link rel="shortcut icon" href="~/fasson.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="~/Content/main.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/Camera.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/bootstrap/bootstrap_spacelab.css" />
+    <link id="theme" rel="stylesheet" type="text/css">
+    <!--НАБОР ШРИФТОВ
+    literata, Oswald, PT+Sans,
+    Roboto Slab, Ubuntu Condensed  для текста
+    Russo One для заголовков-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Literata|Oswald|PT+Sans|Roboto+Slab|Russo+One|Ubuntu+Condensed&display=swap">
+    <!--Анимации-->
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+</head>
+<body>
+    <!--Здесь будет верхняя панель с надписью и переходами-->
+    <header>
+        <h1 id="TOP_article">FassonAPI</h1>
+        <h1 id="ForNotice" style="cursor: auto; margin-bottom: 0rem;"></h1>
+
+        <div id="loading" class="mdl-spinner mdl-js-spinner"></div>
+        <div id="navbar">
+            <button type="button" class="navbar mdl-button mdl-js-button mdl-js-ripple-effect"
+                    style="border-right:none" id="light" onclick="theme()">
+                Выключить свет
+            </button>
+        </div>
+    </header>
+
+    @RenderBody()
+
+    <footer>
+        <h3><b>Информация о разработчике</b></h3>
+        <p>
+            Работу проделал <a href="https://vk.com/kote_narkote0">Попов Виталий Леонидович</a>
+            в качестве курсовой работы для НИУ ВШЭ.
+            <br />
+        </p>
+        @*<p>PS: ну дайте мне стажировку, я и не такое могу!</p>
+        <h6><b> All rights NOT reserved.</b></h6>*@
+
+        <p><a target="_blank" href="https://icons8.com/icons/set/facial-recognition-scan">Facial Recognition icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></p>
+    </footer>
+
+    <!--Подключение скриптов.-->
+    <script defer src="~/Scripts/UIcontroller.js"></script>
+    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+    <script src="~/Scripts/JQuery/jquery-3.4.1.min.js"></script>
+    <script defer src="~/Scripts/CameraController.js" charset="utf-8" type="text/javascript"></script>
+
+</body>
+</html>

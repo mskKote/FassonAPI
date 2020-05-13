@@ -1,0 +1,98 @@
+
+body {
+    background-color: #556 !important;
+}
+
+div.workspace, div.Accounts, div.welcome-land, aside, footer {
+    background-color: #353838 !important;
+}
+
+
+h1, h2, h3, h4, article, p, #emailHelp,
+hr, h3#welcome-land-h3, aside,
+button, footer, header, div {
+    color: whitesmoke !important;
+}
+
+button, header {
+    opacity: 0.90;
+}
+footer {
+opacity: 1 !important;
+}
+div {
+    opacity: 1;
+}
+
+    div.welcome-land {
+        opacity: 0.9 !important;
+    }
+
+aside {
+    opacity: 1;
+}
+
+header, div {
+    background-color: #2b2d33;
+}
+
+form.corona {
+    border: solid 2px black !important;
+}
+
+div.Instruction_manual_UI {
+    background-color: #414545;
+}
+
+a {
+    color: gainsboro !important;
+    border-bottom: 1.5px dashed gainsboro;
+}
+
+    a:hover {
+        color: aquamarine !important;
+        text-decoration: none !important;
+    }
+
+/*Кнопки*/
+button {
+    border-bottom: inset 3px black !important;
+    border-right: groove 2px black !important;
+}
+
+    button.navbar {
+        background-color: #2b2d33;
+    }
+
+    button.nav {
+        background-color: #353838;
+    }
+
+    button.authorization {
+        background-color: cornflowerblue;
+        opacity: 1 !important;
+    }
+
+    button#light {
+        background-color: #2b2d33 !important;
+        border: none !important;
+        border-left: dashed 3px whitesmoke !important;
+        border-radius: 0px;
+    }
+
+    button.Instruction_manual_UI {
+        background-color:cornflowerblue;
+        /*border-color: #414545;*/
+        opacity: 1 !important;
+    }
+
+    button#startbutton {
+        border: 2px solid black;
+        border-top: 1px;
+        border-left: none;
+        background-color: #2b2d33;
+    }
+
+input {
+    background-color: lavender !important;
+}

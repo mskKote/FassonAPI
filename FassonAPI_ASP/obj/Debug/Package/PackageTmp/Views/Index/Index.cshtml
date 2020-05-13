@@ -1,0 +1,148 @@
+﻿@model IEnumerable<FassonAPI_ASP.Models.DataBase.User>
+@{
+    ViewBag.Title = "FassonAPI";
+    Layout = "~/Views/Shared/_DefaultPage.cshtml";
+}
+<!--Надпись приветствия-->
+<div class="welcome-land">
+    <article>
+        <h1>Рад приветствовать вас на защите моей курсовой работы!</h1>
+        <h3 id="welcome-land-h3">Эта страница представляет собой наглядную демонстрацию возможностей <b>Fasson API</b>.</h3>
+    </article>
+</div>
+
+<!--Блок с регистрацией и аутентификацией.-->
+<div class="workspace">
+
+    <form class="corona" style="height:auto;">
+        <h3 style="margin-top:0vh; margin-bottom:1vh; color:whitesmoke;">
+            Как это работает?
+        </h3>
+    </form>
+    <!--------------РЕГИСТРАЦИЯ-------------->
+    <div class="Instruction_manual_UI">
+        <h3 class="Instruction_manual_UI">Шаг 1. Регистрация</h3>
+        <p class="Instruction_manual_UI">
+            Первым делом необходимо зарегистрировать аккаунт, <br />
+            к которому в процессе регистрации будет прикреплено лицо.<br /><br />
+            Зарегистрируйте лицо сразу или позднее, однако, при этом используйте корректные логин и пароль.
+        </p>
+
+        <input name="Login" type="text" class="form-control Registration" aria-describedby="emailHelp" placeholder="Логин" required>
+        <input name="Password" type="password" class="form-control Registration" placeholder="Пароль" required>
+        <input name="PasswordCheck" type="password" class="form-control Registration" placeholder="Подтверждение пароля" required>
+
+        <button id="btnReg" type="button" class="authorization navbar mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"
+                onclick="Submit('/Index/Registration/');">
+            <p class="authorization navbar">Зарегистрироваться</p>
+        </button>
+        <button type="button" class="authorization navbar mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"
+                id="RegistrPortrait">
+            <p class="authorization navbar" id="RegistrPortrait">Прикрепить портрет</p>
+        </button>
+        <br />
+    </div>
+
+    <!--------------СОЗДАНИЕ ПОРТРЕТА-------------->
+    <div class="Instruction_manual_UI">
+        <h3 class="Instruction_manual_UI">Шаг 1.1 Создание портрета</h3>
+        <p class="Instruction_manual_UI">
+            Прикрепите лицо к уже существующему аккаунту <br />
+        </p>
+
+        <input name="Login" type="text" class="form-control CreatePortrait" aria-describedby="emailHelp" placeholder="Логин" required>
+        <input name="Password" type="password" class="form-control CreatePortrait" placeholder="Пароль" required>
+        <input name="PasswordCheck" type="password" class="form-control CreatePortrait" placeholder="Подтверждение пароля" required>
+
+        <button type="button" class="authorization navbar mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"
+                id="CreatePortrait">
+            <p class="authorization navbar" id="CreatePortrait">Прикрепить портрет</p>
+        </button>
+        <br />
+    </div>
+
+    <!--------------АУТЕНТИФИКАЦИЯ-------------->
+    <div class="Instruction_manual_UI">
+        <h3 class="Instruction_manual_UI">Шаг 2. Аутентификация</h3>
+        <p class="Instruction_manual_UI">
+            После того, как пользователь зарегистрирован,<br />
+            можно протеситровать возможности аутентификации.
+        </p>
+        <input name="Login" type="text" class="form-control Auth" aria-describedby="emailHelp" placeholder="Логин" required>
+        <input name="Password" type="password" class="form-control Auth" placeholder="Пароль">
+        <small id="emailHelp" class="form-text text-muted" style="margin-left: 8px !important">
+            Если вы пользуетесь входом по лицу, то вводить пароль не нужно
+        </small>
+        <button id="btnAuth" type="button" class="authorization navbar  mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"
+                onclick="Submit('/Index/Authentication/');">
+            <p class="authorization navbar">Аутентификация</p>
+        </button>
+        <button type="button" class="authorization navbar mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"
+                id="AuthPortrait">
+            <p class="authorization navbar" id="AuthPortrait">Войти, используя лицо</p>
+        </button>
+        <br />
+    </div>
+
+    <!--------------УДАЛЕНИЕ АККАУНТА-------------->
+    <div class="Instruction_manual_UI">
+        <h3 class="Instruction_manual_UI">Шаг 3. Удаление аккаунта</h3>
+        <p class="Instruction_manual_UI">
+            После тестирования у пользователя есть опция<br />
+            удалить созданный аккаунт.
+        </p>
+        <input name="Login" type="text" class="form-control AccDel" aria-describedby="emailHelp" placeholder="Логин" required>
+        <input name="Password" type="password" class="form-control AccDel" placeholder="Пароль" required>
+        <button id="btnAccDel" type="button" class="authorization navbar mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"
+                onclick="Accounts(Controller = '/Index/DeleteAccount/',
+        ReqData = `Login=${AD_itLogin.value}&Password=${AD_itPassword.value}`, Type = 'POST');">
+            <p class="authorization navbar">Удалить аккаунт</p>
+        </button>
+        <br />
+    </div>
+
+    <!--------------Фидбэк-------------->
+    <div class="Instruction_manual_UI" id="testing">
+        <h3 class="Instruction_manual_UI">Книга жалоб и предложений</h3>
+        <p class="Instruction_manual_UI">
+            Опишите ваши впечатления.<br />
+        </p>
+        @using (Html.BeginForm("FeedBack", "Index", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <input name="feedBack" type="text" class="form-control Auth" aria-describedby="emailHelp" placeholder="Напишите отзыв" required>
+            <input type="submit" class="form-control Auth" aria-describedby="emailHelp">
+        }
+    </div>
+</div>
+
+<!--Отображение аккаунтов из базы данных.-->
+<aside class="Accounts">
+    <form class="corona" style="border-radius: 20px;">
+        <h3 style="margin-top:0vh; margin-bottom:0vh; color:whitesmoke; ">
+            Аккаунты
+            <button class="mdl-button mdl-js-button mdl-button mdl-js-ripple-effect Accounts" style="border-radius: 100px !important; border: none !important;">
+                <img src="https://img.icons8.com/clouds/96/000000/cloud-refresh.png" alt="Reload" id="reload" onclick="Accounts()" width="50" height="50" />
+            </button>
+        </h3>
+
+    </form>
+    <div class="Accounts">
+        @foreach (var user in Model)
+        {
+            // Поля: логин, пароль, картинка
+            if (user.FaceID != null)
+            {
+                <img class="Accounts" src="data:image/png;base64,@Convert.ToBase64String(user.Portrait)" alt="Alternate Text" />
+            }
+            <h4 class="Accounts">@user.Login</h4>
+            <p class="Accounts">@user.Password</p>
+
+            <hr />
+        }
+        @if (Model.Count() == 0)
+        {
+            <br />
+            <h4 style="text-align: center">Аккаунтов пока нет</h4>
+        }
+    </div>
+</aside>

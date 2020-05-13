@@ -1,0 +1,372 @@
+/*Цветовая палитра: [Светлый --> Тёмный]
+whitesmoke, gainsboro, lightgrey
+rgba(255, 245, 238, 0.335), #414545, #353838, 
+#2b2d33, #1a1c20, black 
+
+Остальное:
+hsl(357, 92%, 66%)
+#41b682 - зелёный
+lightpink - розовый
+
+Авторизация
+Светлая тема --> hsl(0, 100%, 78%) ||  hsl(0, 77%, 58%) <-- Тёмная тема
+*/
+html {
+    line-height: 1.15 !important;
+}
+
+body {
+    background: radial-gradient(#000 15%, transparent 16%) 0 0, radial-gradient(#000 15%, transparent 16%) 8px 8px, radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px, radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+    background-size: 16px 16px;
+    padding-top: 100px;
+    font-size: 2rem !important;
+    opacity: 1;
+    margin: 0px !important;
+}
+
+footer {
+    margin-top: 1%;
+    padding: 10px 5% 10px 3%;
+    border-top: 3px solid #1a1c20;
+    background-color: #f0f2f3 !important;
+    background: -webkit-radial-gradient(rgba(0, 0, 0, .1)1px, transparent 1px);
+    background: radial-gradient(rgba(0, 0, 0, 0.2)1px, rgba(216, 217, 219, 0.28) 1px);
+    -webkit-background-size: 8px 8px;
+    background-size: 8px 8px;
+    color: #000;
+    opacity: 1;
+    width: 100%;
+    float: left;
+}
+/*Верхняя менюшка header*/
+#navbar {
+    display: flex;
+    flex-direction: row;
+}
+
+header {
+    opacity: 0.95;
+    position: fixed;
+    background-color: whitesmoke;
+        top: 0px;
+    width: 99.09vw;
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    padding-bottom: 1px;
+}
+
+    header h1, h1#TOP_article {
+        margin: 0px !important;
+        margin-left: 10px !important;
+    }
+
+    header button {
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+    }
+/*Заголовки*/
+h1 {
+    font-family: 'Russo One', sans-serif !important;
+    font-size: 2rem !important;
+    letter-spacing: normal;
+    color: rgb(0, 0, 0);
+}
+
+    h1 #TOP_article {
+        margin-block-start: 1vh !important;
+        margin-block-end: 0vh !important;
+        margin-inline-start: 0px !important;
+        margin-inline-end: 0px !important;
+        font-size: 2.5rem !important;
+        color: rgb(0, 0, 0);
+        cursor: auto;
+        display: block;
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 1.2;
+        margin-top: 0px;
+        /*text-align: left;*/
+        text-size-adjust: 100%;
+    }
+
+h1, h2 {
+    margin-left: 8px !important;
+}
+
+h3 {
+    font-size: 1.75rem !important;
+}
+
+h4 {
+    font-size: 1.5rem !important;
+}
+
+h5, h6 {
+    margin-block-start: 0%;
+    margin-block-end: 0%;
+    font-weight: bolder !important;
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: 'Literata', serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2 !important;
+    margin-top: 0 !important;
+    /*margin-bottom: 0.5rem !important;*/
+    font-weight: 500 !important;
+}
+
+    h3.Instruction_manual_UI {
+        font-size: 2rem !important;
+    }
+    /*Форматирование текста*/
+    p {
+        color: #000;
+        font-size: 20px !important;
+        font-family: 'Ubuntu Condensed', sans-serif !important;
+    }
+
+    p.Instruction_manual_UI {
+        margin: 5vh 15vw 4vh 1%;
+        color: #353838;
+    }
+
+a {
+    color: black;
+    text-decoration: none;
+    border-bottom: 1.5px dashed black;
+    font-size: large;
+    font-weight: 900;
+}
+
+    a:hover {
+        color: royalblue !important;
+        text-decoration: none !important;
+    }
+
+/*Стили, которые есть во всех файлах*/
+input {
+    font-family: 'Roboto Slab', serif !important;
+    font-size: 17px !important;
+    color: #000 !important;
+}
+input::placeholder {
+    color: gray !important;
+    font-family: 'Roboto Slab', serif;
+    font-size: 17px;
+}
+
+/*Кнопки*/
+button {
+    font-family: 'Roboto Slab', serif !important;
+    /*margin: 0.3px 1.5%;*/
+    background-color: rgba(255, 245, 238, 0.335);
+    text-align: center;
+    height: auto !important;
+}
+
+    button.navbar {
+        padding: 10px;
+        min-width: 10vw;
+        margin: 0px !important;
+        border: none;
+        font-weight: bold !important;
+    }
+
+    button.authorization {
+        background-color: hsl(0, 100%, 78%);
+        font-weight: normal !important;
+        border-radius: 10px;
+        margin: 0px;
+        margin-left: 1.5% !important;
+        margin-top: 10px !important;
+        /*min-width: 25vw;*/
+    }
+
+    button.Instruction_manual_UI {
+        background-color: hsl(0, 100%, 78%);
+        font-size: 15px !important;
+        margin: 10px 0% 0% 1% !important;
+        margin-left: 1.5% !important;
+        padding: 3px 4px;
+        padding-bottom: 4px;
+        padding-top: 4px;
+        border-radius: 10px;
+    }
+
+p#RegistrPortrait, p#AuthPortrait, p#CreatePortrait, p.navbar.authorization {
+    font-family: 'Roboto Slab', serif !important;
+    font-size: 16px !important;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    text-align: justify !important;
+}
+
+/*Блоки*/
+div {
+    opacity: 1;
+    background-color: whitesmoke;
+}
+
+    div.welcome-land {
+        margin: 0vw 5vw 1vh 5vw;
+        padding: 10px;
+        border: 2px solid black;
+        border-radius: 10px;
+        opacity: 0.9;
+    }
+
+        div.welcome-land h3, h4 {
+            color: #000;
+            margin-bottom: 0px !important;
+        }
+
+    div.workspace {
+        margin: 0vw 0vw 2vw 3vw;
+        padding-bottom: 20px;
+        border: 2px solid black;
+        border-top: none;
+        border-radius: 24px;
+        height: auto;
+        width: 67vw;
+        float: left;
+    }
+
+    div.Instruction_manual_UI {
+        margin: 4vh 3vw 1% 3vw;
+        padding: 1vh 3vw 2vh 3vh;
+        border: none;
+        border-radius: 10px;
+        align-content: center;
+        font-size: 13px !important;
+        background-color: lightgrey;
+    }
+
+
+/*Аккаунты*/
+aside.Accounts {
+    border: 2px solid black;
+    border-top: none;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 23px;
+    background-color: whitesmoke;
+    margin: 0vw 3vw 2vw 0vw;
+    padding: 0px;
+    width: 25.1vw;
+    height: 100%;
+    float: right;
+}
+
+div.Accounts {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 2px;
+    min-height: 200px;
+    max-height: 730px;
+    overflow-y: scroll;
+}
+
+h4.Accounts, p.Accounts {
+    margin-top: 10px !important;
+    text-align: center;
+}
+h4.Accounts {
+    font-size: 0.9em !important;
+}
+
+p.Accounts {
+    font-size: 0.7em !important;
+}
+
+img {
+    font-size: 18px !important;
+    color: hsl(357, 92%, 66%);
+    font-family: 'Ubuntu Condensed', sans-serif !important;
+}
+
+    img.Accounts {
+        border-radius: 30px;
+        width: 100%;
+        height: auto;
+        margin-top: 5px;
+    }
+
+form.corona button {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+hr {
+    height: 3px !important;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+form.corona {
+    text-align: center;
+    border-radius: 24px;
+    border: 2px solid black;
+    border-right: none !important;
+    border-left: none !important;
+    border-top: none;
+    background-color: #1a1c20;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    width: 100%;
+    color: whitesmoke;
+}
+
+small#emailHelp {
+    font-size: 16px !important;
+    font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+@media screen and (max-width: 992px) {
+    div.workspace, aside.Accounts {
+        margin: 0vw 3vw 2vw 3vw;
+        width: auto;
+        float: none;
+    }
+
+    div.Accounts {
+        max-height: 300px;
+    }
+    img.Accounts {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 75%;
+    }
+
+    p.Accounts {
+        font-size: 1.4em !important;
+    }
+    h4.Accounts {
+        font-size: 1.6em !important;
+        margin-bottom: 1.5vh;
+    }
+    h4.Accounts, p.Accounts {
+        margin-top: 10px !important;
+        text-align: center;
+    }
+
+    header {
+        width: 100%;
+    }
+
+    div#loading {
+        display: none;
+    }
+
+    aside.Accounts form.corona h3 {
+        font-size: 1.6em !important;
+    }
+    form.corona h3 {
+        font-size: 1.1em !important;
+    }
+}
