@@ -21,3 +21,5 @@ All documentation...
 
 ##
 And, yeap, keys from FaceAPI and Azure Blob Storage still correct [Untill 21 may]
+
+DO NOT LOOK AT THE 93.6% of JS, thats libraries(
